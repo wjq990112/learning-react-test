@@ -5,7 +5,7 @@ type TListItem = {
   value: string;
 };
 
-interface IList {
+export interface IList {
   list: TListItem[];
   deleteItem: (index: number) => void;
   changeStatus: (index: number) => void;

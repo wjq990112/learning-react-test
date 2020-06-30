@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Header from './components/Header';
 import UndoList from './components/List';
 
@@ -6,6 +7,15 @@ import './App.css';
 
 function App() {
   const [undoList, setUndoList] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('/undoList.json')
+      .then((res) => {
+        setUndoList(res.data.data);
+      })
+      .catch((e) => {});
+  }, []);
 
   const valueChange = (index: number, value: string) => {
     const newList = undoList.map((item, listIndex) => {

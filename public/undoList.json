@@ -1,0 +1,18 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "status": "div",
+      "value": "学习 Jest"
+    },
+    {
+      "status": "div",
+      "value": "学习 Enzyme"
+    },
+    {
+      "status": "div",
+      "value": "学习 Testing-Library"
+    }
+  ],
+  "message": "success"
+}
