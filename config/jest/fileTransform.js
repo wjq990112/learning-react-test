@@ -13,10 +13,10 @@ module.exports = {
     if (filename.match(/\.svg$/)) {
       // Based on how SVGR generates a component name:
       // https://github.com/smooth-code/svgr/blob/01b194cf967347d43d4cbe6b434404731b87cf27/packages/core/src/state.js#L6
-      const pascalCaseFilename = camelcase(path.parse(filename).name, {
+      const pascalCaseFileName = camelcase(path.parse(filename).name, {
         pascalCase: true,
       });
-      const componentName = `Svg${pascalCaseFilename}`;
+      const componentName = `Svg${pascalCaseFileName}`;
       return `const React = require('react');
       module.exports = {
         __esModule: true,
