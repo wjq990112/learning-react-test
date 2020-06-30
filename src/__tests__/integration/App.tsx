@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  render,
-  fireEvent,
-  act,
-  RenderResult,
-  waitForDomChange
-} from '@testing-library/react';
+import { render, fireEvent, act, RenderResult } from '@testing-library/react';
 import App from '../../App';
 import axios from 'axios';
 
