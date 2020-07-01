@@ -6,7 +6,12 @@ module.exports = {
   // 测试根目录
   roots: ['<rootDir>/src'],
   // 测试覆盖率收集范围: src 下所有的 js jsx ts tsx
-  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!src/**/*.d.ts',
+    '!src/index.tsx',
+    '!src/serviceWorker.ts'
+  ],
   // 运行测试前准备文件: 引入 polyfill 解决 jsdom 的兼容性问题
   setupFiles: ['react-app-polyfill/jsdom'],
   // 测试运行环境搭建完成后引入的额外处理文件

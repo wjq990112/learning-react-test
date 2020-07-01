@@ -13,6 +13,7 @@ beforeEach(() => {
 
 afterEach(() => {
   wrapper = null;
+  input = null;
 });
 
 describe('Header 组件', () => {
