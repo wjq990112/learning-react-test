@@ -45,7 +45,7 @@ beforeEach(async () => {
 });
 
 // 运行后重置
-afterAll(() => {
+afterEach(() => {
   wrapper = null;
   headerInput = null;
   count = null;
@@ -55,7 +55,7 @@ afterAll(() => {
 });
 
 describe('App 组件（请求成功时）', () => {
-  it('测试组件初始化后的状态', () => {
+  it('组件初始化正常', () => {
     // headerInput 存在
     expect(headerInput).not.toBeNull();
 
@@ -73,7 +73,7 @@ describe('App 组件（请求成功时）', () => {
     expect(input).toHaveLength(0);
   });
 
-  it('测试输入后列表项是否会增加', () => {
+  it('输入框提交后列表项应该增加', () => {
     fireEvent.change(headerInput, {
       target: { value: '分享自动化测试学习成果' }
     });
@@ -88,7 +88,7 @@ describe('App 组件（请求成功时）', () => {
     expect(list[3]).toHaveTextContent('分享自动化测试学习成果');
   });
 
-  it('测试删除后列表项是否会减少', () => {
+  it('列表项删除后应该能减少', () => {
     fireEvent.click(deleteBtn[2]);
 
     expect(count.textContent).toEqual('2');
@@ -97,7 +97,7 @@ describe('App 组件（请求成功时）', () => {
     expect(list).toHaveLength(2);
   });
 
-  it('测试点击列表项后编辑行为', () => {
+  it('列表项应该能编辑并提交', () => {
     fireEvent.click(list[2]);
     const editingItemInput = list[2].querySelector(
       '[data-testid="input"]'

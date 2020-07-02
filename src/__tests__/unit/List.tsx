@@ -3,7 +3,7 @@ import { render, fireEvent } from '@testing-library/react';
 import List, { IList } from '../../components/List';
 
 describe('List 组件', () => {
-  it('测试组件初始化后的状态', () => {
+  it('组件初始化正常', () => {
     const props: IList = {
       list: [],
       deleteItem: jest.fn(),
@@ -23,7 +23,7 @@ describe('List 组件', () => {
     expect(list).toHaveLength(0);
   });
 
-  it('测试列表项删除', () => {
+  it('列表项应该能删除', () => {
     const props: IList = {
       list: [{ status: 'div', value: 'Learn Jest' }],
       deleteItem: jest.fn(),
@@ -54,7 +54,7 @@ describe('List 组件', () => {
     expect(props.deleteItem).toHaveBeenCalledWith(0);
   });
 
-  it('测试列表项编辑', () => {
+  it('列表项应该能编辑', () => {
     const props: IList = {
       list: [
         { status: 'div', value: 'Learn Jest' },

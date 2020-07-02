@@ -17,7 +17,7 @@ afterEach(() => {
 });
 
 describe('Header 组件', () => {
-  it('测试组件初始化后的状态', () => {
+  it('组件初始化正常', () => {
     // input 存在
     expect(input).not.toBeNull();
 
@@ -25,7 +25,7 @@ describe('Header 组件', () => {
     expect(input.value).toEqual('');
   });
 
-  it('测试是否能够正常输入', () => {
+  it('输入框应该能输入', () => {
     const inputEvent = {
       target: {
         value: 'Learn Jest'
@@ -37,7 +37,7 @@ describe('Header 组件', () => {
     expect(input.value).toEqual(inputEvent.target.value);
   });
 
-  it('测试是否能够正常回车并置空', () => {
+  it('输入框回车后应该能提交并清空', () => {
     const inputEvent = {
       target: {
         value: 'Learn Jest'

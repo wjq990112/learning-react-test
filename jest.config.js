@@ -15,10 +15,7 @@ module.exports = {
   // 运行测试前准备文件: 引入 polyfill 解决 jsdom 的兼容性问题
   setupFiles: ['react-app-polyfill/jsdom'],
   // 测试运行环境搭建完成后引入的额外处理文件
-  setupFilesAfterEnv: [
-    '<rootDir>/src/setupTests.ts',
-    '<rootDir>/node_modules/jest-enzyme/lib/index.js'
-  ],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   // test 匹配项: 在 __tests__ 文件夹下的所有 js jsx ts tsx 和以 spec test 为中间名的 js jsx ts tsx
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
